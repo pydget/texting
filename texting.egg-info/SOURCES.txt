@@ -1,0 +1,16 @@
+README.rst
+setup.py
+texting/__init__.py
+texting.egg-info/PKG-INFO
+texting.egg-info/SOURCES.txt
+texting.egg-info/dependency_links.txt
+texting.egg-info/top_level.txt
+texting/has_ansi/__init__.py
+texting/has_ansi/elements.py
+texting/has_ansi/regs.py
+texting/indexing/__init__.py
+texting/lange/__init__.py
+texting/pad/__init__.py
+texting/str_util/__init__.py
+texting/str_value/__init__.py
+texting/tap/__init__.py
