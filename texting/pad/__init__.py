@@ -1,10 +1,10 @@
-def pad_start(text: str, width: int, fill_char: str = ' '):
-    return f'{text:{fill_char[0]}>{width}}'
+def lpad(text: str, width: int, fill: str = ' '):
+    return f'{text:{fill[0]}>{width}}'
 
 
-def pad_end(text: str, width: int, fill_char: str = ' '):
-    return f'{text:{fill_char[0]}<{width}}'
+def rpad(text: str, width: int, fill: str = ' '):
+    return f'{text:{fill[0]}<{width}}'
 
 
-def pad_centered(text: str, width: int, fill_char: str = ' '):
-    return f'{text:{fill_char[0]}^{width}}'
+def mpad(text: str, width: int, fill: str = ' '):
+    return f'{text:{fill[0]}^{width}}'

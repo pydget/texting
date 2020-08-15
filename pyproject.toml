@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "texting"
-version = "0.0.1"
+version = "0.0.3"
 description = "misc for string"
 authors = ["Hoyeung Wong <hoyeungw@outlook.com>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/hoyeungw/intype"
-repository = "https://github.com/hoyeungw/intype"
+homepage = "https://github.com/pydget/texting.git"
+repository = "https://github.com/pydget/texting.git"
 keywords = [
     "str", "string", "ansi", "length",
     "pad", "tap", "str_value", "string_value"

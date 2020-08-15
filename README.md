@@ -1,6 +1,12 @@
 ## texting
 ##### misc for string
 
+### Functions
+- has_ansi
+- lange
+- pad: lpad, mpad, rpad
+- str_value
+
 ### Usage
 ```python
 from texting.has_ansi import has_ansi
