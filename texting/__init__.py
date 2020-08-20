@@ -6,7 +6,7 @@ from .indexing import after_nontab, index_nontab
 from .lange import lange
 from .lines import join_lines, liner
 from .pad import cpad, lpad, rpad
-from .ripper import ripper
+from .ripper import ripper, split_literal
 from .str_util import StrTemp
 from .str_value import str_value
 from .tap import link, tag, tags
