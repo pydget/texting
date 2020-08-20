@@ -1,4 +1,3 @@
-# from .tap import link, tag, tags
 from .bracket import anglebr, br, brace, bracket, parenth, to_br
 from .chars import AEU, CO, COLF, COSP, CR, DA, DASH, DOSP, DOT, DT, ELLIP, LF, QT, RN, RT, RTSP, SP, TB, UL, VO
 from .fold import fold, fold_to_vector
