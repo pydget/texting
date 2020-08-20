@@ -1,5 +1,18 @@
 [[package]]
 category = "dev"
+description = "numerical & statistics functions"
+name = "aryth"
+optional = false
+python-versions = ">=3.8,<4.0"
+version = "0.0.5"
+
+[package.dependencies]
+intype = ">=0.0.2"
+texting = ">=0.0.2"
+veho = ">=0.0.4"
+
+[[package]]
+category = "dev"
 description = "Atomic file writes."
 marker = "sys_platform == \"win32\""
 name = "atomicwrites"
@@ -32,6 +45,30 @@ version = "0.4.3"
 
 [[package]]
 category = "dev"
+description = "iniconfig: brain-dead simple config-ini parsing"
+name = "iniconfig"
+optional = false
+python-versions = "*"
+version = "1.0.1"
+
+[[package]]
+category = "dev"
+description = "dynamic type infer"
+name = "intype"
+optional = false
+python-versions = ">=3.8,<4.0"
+version = "0.0.2"
+
+[[package]]
+category = "dev"
+description = "function/lambda extensions"
+name = "ject"
+optional = false
+python-versions = ">=3.8,<4.0"
+version = "0.0.1"
+
+[[package]]
+category = "dev"
 description = "More routines for operating on iterables, beyond itertools"
 name = "more-itertools"
 optional = false
@@ -49,6 +86,20 @@ version = "20.4"
 [package.dependencies]
 pyparsing = ">=2.0.2"
 six = "*"
+
+[[package]]
+category = "dev"
+description = "pretty text for command line"
+name = "palett"
+optional = false
+python-versions = ">=3.8,<4.0"
+version = "0.0.4"
+
+[package.dependencies]
+aryth = ">=0.0.5"
+intype = ">=0.0.2"
+ject = ">=0.0.1"
+veho = ">=0.0.4"
 
 [[package]]
 category = "dev"
@@ -83,20 +134,21 @@ description = "pytest: simple powerful testing with Python"
 name = "pytest"
 optional = false
 python-versions = ">=3.5"
-version = "5.4.3"
+version = "6.0.1"
 
 [package.dependencies]
 atomicwrites = ">=1.0"
 attrs = ">=17.4.0"
 colorama = "*"
+iniconfig = "*"
 more-itertools = ">=4.0.0"
 packaging = "*"
 pluggy = ">=0.12,<1.0"
-py = ">=1.5.0"
-wcwidth = "*"
+py = ">=1.8.2"
+toml = "*"
 
 [package.extras]
-checkqa-mypy = ["mypy (v0.761)"]
+checkqa_mypy = ["mypy (0.780)"]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
@@ -109,18 +161,46 @@ version = "1.15.0"
 
 [[package]]
 category = "dev"
-description = "Measures the displayed width of unicode strings in a terminal"
-name = "wcwidth"
+description = "Python Library for Tom's Obvious, Minimal Language"
+name = "toml"
 optional = false
 python-versions = "*"
-version = "0.2.5"
+version = "0.10.1"
+
+[[package]]
+category = "dev"
+description = "easy enumerate"
+name = "veho"
+optional = false
+python-versions = ">=3.8,<4.0"
+version = "0.0.4"
+
+[[package]]
+category = "dev"
+description = "pretty print"
+name = "xbrief"
+optional = false
+python-versions = ">=3.8,<4.0"
+version = "0.0.5"
+
+[package.dependencies]
+aryth = ">=0.0.5"
+intype = ">=0.0.2"
+ject = ">=0.0.1"
+palett = ">=0.0.4"
+texting = ">=0.0.3"
+veho = ">=0.0.4"
 
 [metadata]
-content-hash = "c27944f25b55067b06883f1cea204be7d97841a4b8228fab69b91895347494ad"
+content-hash = "6c71e223316791efc4c1a5370103b81780263ead5463533994076289196cd016"
 lock-version = "1.0"
 python-versions = "^3.8"
 
 [metadata.files]
+aryth = [
+    {file = "aryth-0.0.5-py3-none-any.whl", hash = "sha256:db5d9a2bb0811a006b0ab06e8c7dc424cb68adb28489914e6b4321e587d764e5"},
+    {file = "aryth-0.0.5.tar.gz", hash = "sha256:c17f7ee043671b33021da5c7f4a94aaf0305b699d2f2dcd40e34888a4328cbf0"},
+]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
     {file = "atomicwrites-1.4.0.tar.gz", hash = "sha256:ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"},
@@ -133,6 +213,18 @@ colorama = [
     {file = "colorama-0.4.3-py2.py3-none-any.whl", hash = "sha256:7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff"},
     {file = "colorama-0.4.3.tar.gz", hash = "sha256:e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"},
 ]
+iniconfig = [
+    {file = "iniconfig-1.0.1-py3-none-any.whl", hash = "sha256:80cf40c597eb564e86346103f609d74efce0f6b4d4f30ec8ce9e2c26411ba437"},
+    {file = "iniconfig-1.0.1.tar.gz", hash = "sha256:e5f92f89355a67de0595932a6c6c02ab4afddc6fcdc0bfc5becd0d60884d3f69"},
+]
+intype = [
+    {file = "intype-0.0.2-py3-none-any.whl", hash = "sha256:d4ff07381080cda7b56ebd9757a8e77ecfd1bdf8df386ca521b595b06bc98fe9"},
+    {file = "intype-0.0.2.tar.gz", hash = "sha256:696967020ef29fba4c204e822ad568085047f8985a15e47774f9ce10c450b7f4"},
+]
+ject = [
+    {file = "ject-0.0.1-py3-none-any.whl", hash = "sha256:ca46be22d3c13b4ca0ca0c64e60bf90ac0edf00e4eb8e7a47a07271c13b04117"},
+    {file = "ject-0.0.1.tar.gz", hash = "sha256:22a77b46beff4d45e2d833107da7b7fe5289f176920d6c52fcb1c2b7dcf95db3"},
+]
 more-itertools = [
     {file = "more-itertools-8.4.0.tar.gz", hash = "sha256:68c70cc7167bdf5c7c9d8f6954a7837089c6a36bf565383919bb595efb8a17e5"},
     {file = "more_itertools-8.4.0-py3-none-any.whl", hash = "sha256:b78134b2063dd214000685165d81c154522c3ee0a1c0d4d113c80361c234c5a2"},
@@ -140,6 +232,10 @@ more-itertools = [
 packaging = [
     {file = "packaging-20.4-py2.py3-none-any.whl", hash = "sha256:998416ba6962ae7fbd6596850b80e17859a5753ba17c32284f67bfff33784181"},
     {file = "packaging-20.4.tar.gz", hash = "sha256:4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"},
+]
+palett = [
+    {file = "palett-0.0.4-py3-none-any.whl", hash = "sha256:25050e3973aec73d0c952999502dcabd5633d0dd06d61ed507517bb8f064feb3"},
+    {file = "palett-0.0.4.tar.gz", hash = "sha256:3e69195db2f109519b5839dcb0cc11327677f77fc68f6ef45dcbda01d18f7b9c"},
 ]
 pluggy = [
     {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
@@ -154,14 +250,22 @@ pyparsing = [
     {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
 ]
 pytest = [
-    {file = "pytest-5.4.3-py3-none-any.whl", hash = "sha256:5c0db86b698e8f170ba4582a492248919255fcd4c79b1ee64ace34301fb589a1"},
-    {file = "pytest-5.4.3.tar.gz", hash = "sha256:7979331bfcba207414f5e1263b5a0f8f521d0f457318836a7355531ed1a4c7d8"},
+    {file = "pytest-6.0.1-py3-none-any.whl", hash = "sha256:8b6007800c53fdacd5a5c192203f4e531eb2a1540ad9c752e052ec0f7143dbad"},
+    {file = "pytest-6.0.1.tar.gz", hash = "sha256:85228d75db9f45e06e57ef9bf4429267f81ac7c0d742cc9ed63d09886a9fe6f4"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
     {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
 ]
-wcwidth = [
-    {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},
-    {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},
+toml = [
+    {file = "toml-0.10.1-py2.py3-none-any.whl", hash = "sha256:bda89d5935c2eac546d648028b9901107a595863cb36bae0c73ac804a9b4ce88"},
+    {file = "toml-0.10.1.tar.gz", hash = "sha256:926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f"},
+]
+veho = [
+    {file = "veho-0.0.4-py3-none-any.whl", hash = "sha256:44049086198860b91c9f61668448892aea33a00ca569004662637a2459bad500"},
+    {file = "veho-0.0.4.tar.gz", hash = "sha256:f135254264a3180152591f54ab65e0f575fc7a5e04471bd064deb0cdfdb5d389"},
+]
+xbrief = [
+    {file = "xbrief-0.0.5-py3-none-any.whl", hash = "sha256:1d478b4ecbcdbe3daf314c8d3133eaa762bca87ec396e0f0360fa5ba3fcffeec"},
+    {file = "xbrief-0.0.5.tar.gz", hash = "sha256:231672b77f6c875e0603e1927be2772667c73beb39729e4d4054db75f6070888"},
 ]
