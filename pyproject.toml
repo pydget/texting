@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "texting"
-version = "0.0.7"
+version = "0.0.9"
 description = "misc for string"
 authors = ["Hoyeung Wong <hoyeungw@outlook.com>"]
 license = "MIT"

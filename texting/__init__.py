@@ -6,6 +6,7 @@ from .indexing import after_nontab, index_nontab
 from .lange import lange
 from .lines import join_lines, liner
 from .pad import cpad, lpad, rpad
+from .phrasing import camel_to_snake, snake_to_camel, snake_to_pascal
 from .ripper import ripper, split_literal
 from .str_util import StrTemp
 from .str_value import str_value

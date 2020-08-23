@@ -1,8 +1,6 @@
-import re
-
-from texting import ripper
+from texting import ripper, split_literal
 from texting.enum.regexes import LITERAL
 
-LITERAL_INSTANCE = re.compile(LITERAL)
+print(ripper(LITERAL, "- Friends, Romans, countrymen, lend me your ears -"))
 
-print(ripper(LITERAL_INSTANCE, "- Friends, Romans, countrymen, lend me your ears -"))
+print(split_literal("- Friends, Romans, countrymen, lend me your ears -"))

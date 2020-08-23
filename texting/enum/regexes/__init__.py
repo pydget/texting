@@ -1,8 +1,20 @@
-INIWORD = '[A-Za-z\d]+'
-INILOW = '^[a-z]+'
-CAMEL = '[A-Z]+|[0-9]+'
-LITERAL = '[a-z]+|[A-Z][a-z]+|(?<=[a-z]|\W|_)[A-Z]+(?=[A-Z][a-z]|\W|_|$)|[\d]+[a-z]*'
-WORD = '[A-Za-z\d]+'
-CAPWORD = '[A-Z][a-z]+|[A-Z]+(?=[A-Z][a-z]|\d|\W|_|$)|[\d]+[a-z]*'
-DASH_CAPREST = '[\W_]+([A-Za-z\d])([A-Za-z\d]*)'
-CAPREST = '([A-Za-z\d])([A-Za-z\d]*)'
+import re
+
+from .strings import \
+    INIWORD as INIWORD_STR, \
+    INILOW as INILOW_STR, \
+    CAMEL as CAMEL_STR, \
+    LITERAL as LITERAL_STR, \
+    WORD as WORD_STR, \
+    CAPWORD as CAPWORD_STR, \
+    DASH_CAPREST as DASH_CAPREST_STR, \
+    CAPREST as CAPREST_STR
+
+INIWORD = re.compile(INIWORD_STR)
+INILOW = re.compile(INILOW_STR)
+CAMEL = re.compile(CAMEL_STR)
+LITERAL = re.compile(LITERAL_STR)
+WORD = re.compile(WORD_STR)
+CAPWORD = re.compile(CAPWORD_STR)
+DASH_CAPREST = re.compile(DASH_CAPREST_STR)
+CAPREST = re.compile(CAPREST_STR)
