@@ -1,5 +1,4 @@
-from texting import LF
-from texting.phrasing import camel_to_snake, snake_to_camel, snake_to_pascal
+from texting import LF, camel_to_snake, snake_to_camel, snake_to_pascal
 
 candidates = {
     'onlyDash': '-._',
