@@ -1,6 +1,6 @@
 [[package]]
 name = "aryth"
-version = "0.0.7"
+version = "0.0.11"
 description = "numerical & statistics functions"
 category = "dev"
 optional = false
@@ -21,15 +21,15 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "attrs"
-version = "20.2.0"
+version = "20.3.0"
 description = "Classes Without Boilerplate"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.extras]
-dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "sphinx", "sphinx-rtd-theme", "pre-commit"]
-docs = ["sphinx", "sphinx-rtd-theme", "zope.interface"]
+dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "furo", "sphinx", "pre-commit"]
+docs = ["furo", "sphinx", "zope.interface"]
 tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface"]
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six"]
 
@@ -43,8 +43,8 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "crostab"
-version = "0.0.5"
-description = ""
+version = "0.0.8"
+description = "cross table analytical tool"
 category = "dev"
 optional = false
 python-versions = ">=3.8,<4.0"
@@ -92,17 +92,19 @@ six = "*"
 
 [[package]]
 name = "palett"
-version = "0.0.4"
+version = "0.0.16"
 description = "pretty text for command line"
 category = "dev"
 optional = false
 python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
-aryth = ">=0.0.5"
+aryth = ">=0.0.10"
+crostab = ">=0.0.6"
 intype = ">=0.0.2"
 ject = ">=0.0.1"
-veho = ">=0.0.4"
+pyspare = ">=0.0.8"
+veho = ">=0.0.7"
 
 [[package]]
 name = "pluggy"
@@ -133,24 +135,24 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "pyspare"
-version = "0.0.2"
+version = "0.0.10"
 description = "pretty print"
 category = "dev"
 optional = false
 python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
-aryth = ">=0.0.6"
+aryth = ">=0.0.11"
 crostab = ">=0.0.5"
 intype = ">=0.0.2"
 ject = ">=0.0.3"
-palett = ">=0.0.4"
+palett = ">=0.0.11"
 texting = ">=0.0.9"
 veho = ">=0.0.4"
 
 [[package]]
 name = "pytest"
-version = "6.1.1"
+version = "6.1.2"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
@@ -180,15 +182,15 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "toml"
-version = "0.10.1"
+version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "veho"
-version = "0.0.4"
+version = "0.0.9"
 description = "easy enumerate"
 category = "dev"
 optional = false
@@ -201,25 +203,27 @@ content-hash = "ef15437b974adc621388cb769e5ea857f260a5068c6f51d2c4ba5c12d84835e9
 
 [metadata.files]
 aryth = [
-    {file = "aryth-0.0.7-py3-none-any.whl", hash = "sha256:11e8d6336e47fa185efec94b2c71ebdb7ebcb93339af299f8ac3302f51bf1427"},
-    {file = "aryth-0.0.7.tar.gz", hash = "sha256:3d28afd856c5a1d73378e290c4f8af053534aa592a41889c3e10876d592410e5"},
+    {file = "aryth-0.0.11-py3-none-any.whl", hash = "sha256:a70f2f5d23cd76bff8225ae0706bc1cc0a194e98a03aa2e3a84cf5dae3e476fd"},
+    {file = "aryth-0.0.11.tar.gz", hash = "sha256:0cb910987b6f9845e565f9c93a377ac783c1b82917e1fb5a76506c15eaaa694b"},
 ]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
     {file = "atomicwrites-1.4.0.tar.gz", hash = "sha256:ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"},
 ]
 attrs = [
-    {file = "attrs-20.2.0-py2.py3-none-any.whl", hash = "sha256:fce7fc47dfc976152e82d53ff92fa0407700c21acd20886a13777a0d20e655dc"},
-    {file = "attrs-20.2.0.tar.gz", hash = "sha256:26b54ddbbb9ee1d34d5d3668dd37d6cf74990ab23c828c2888dccdceee395594"},
+    {file = "attrs-20.3.0-py2.py3-none-any.whl", hash = "sha256:31b2eced602aa8423c2aea9c76a724617ed67cf9513173fd3a4f03e3a929c7e6"},
+    {file = "attrs-20.3.0.tar.gz", hash = "sha256:832aa3cde19744e49938b91fea06d69ecb9e649c93ba974535d08ad92164f700"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
+    {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
 ]
 crostab = [
-    {file = "crostab-0.0.5-py3-none-any.whl", hash = "sha256:6596ef6f0f6bc75046c7ca69d86501f342e01ceaba06e8db7d137c10e04f3a3d"},
-    {file = "crostab-0.0.5.tar.gz", hash = "sha256:16bc76f145ab1784670da7e88c9ea76ebc4eb19a69f3d6f677ae5052d87bd0a8"},
+    {file = "crostab-0.0.8-py3-none-any.whl", hash = "sha256:b32444ddde5988ef9b9ae0e5b033da5d8dd849254590c06c0670a614285537a3"},
+    {file = "crostab-0.0.8.tar.gz", hash = "sha256:86b4a080a7b834f9786f6081a500d3b1882ad846a267042e6b363cde686c0d58"},
 ]
 iniconfig = [
+    {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 intype = [
@@ -235,8 +239,8 @@ packaging = [
     {file = "packaging-20.4.tar.gz", hash = "sha256:4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"},
 ]
 palett = [
-    {file = "palett-0.0.4-py3-none-any.whl", hash = "sha256:25050e3973aec73d0c952999502dcabd5633d0dd06d61ed507517bb8f064feb3"},
-    {file = "palett-0.0.4.tar.gz", hash = "sha256:3e69195db2f109519b5839dcb0cc11327677f77fc68f6ef45dcbda01d18f7b9c"},
+    {file = "palett-0.0.16-py3-none-any.whl", hash = "sha256:74a04cd151ed05784877b2508dd8f8eb7643afb1a7692e9809a758420402cf57"},
+    {file = "palett-0.0.16.tar.gz", hash = "sha256:82ab9ce56da9b7437e6453a9397f6be721a70b807c6eec30e08c15cf427ca434"},
 ]
 pluggy = [
     {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
@@ -251,22 +255,22 @@ pyparsing = [
     {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
 ]
 pyspare = [
-    {file = "pyspare-0.0.2-py3-none-any.whl", hash = "sha256:30a3a88b8b1b0a9f634f589edac87a4c6e0a16afb5fe8a46f89b73d3658de849"},
-    {file = "pyspare-0.0.2.tar.gz", hash = "sha256:e7d0cdeef70a9ddc666e6a2d73a637fda12f96f2bc5db75bdbf59e8992865fea"},
+    {file = "pyspare-0.0.10-py3-none-any.whl", hash = "sha256:cdf6b83f30bdfd77d9e859012dba9d99d89ee9735041ccae210998a32f35b98f"},
+    {file = "pyspare-0.0.10.tar.gz", hash = "sha256:b0b751aa3f178286088af4c2dd98b64f2173f4c71d51403e875b39b468650e44"},
 ]
 pytest = [
-    {file = "pytest-6.1.1-py3-none-any.whl", hash = "sha256:7a8190790c17d79a11f847fba0b004ee9a8122582ebff4729a082c109e81a4c9"},
-    {file = "pytest-6.1.1.tar.gz", hash = "sha256:8f593023c1a0f916110285b6efd7f99db07d59546e3d8c36fc60e2ab05d3be92"},
+    {file = "pytest-6.1.2-py3-none-any.whl", hash = "sha256:4288fed0d9153d9646bfcdf0c0428197dba1ecb27a33bb6e031d002fa88653fe"},
+    {file = "pytest-6.1.2.tar.gz", hash = "sha256:c0a7e94a8cdbc5422a51ccdad8e6f1024795939cc89159a0ae7f0b316ad3823e"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
     {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
 ]
 toml = [
-    {file = "toml-0.10.1-py2.py3-none-any.whl", hash = "sha256:bda89d5935c2eac546d648028b9901107a595863cb36bae0c73ac804a9b4ce88"},
-    {file = "toml-0.10.1.tar.gz", hash = "sha256:926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f"},
+    {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
+    {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 veho = [
-    {file = "veho-0.0.4-py3-none-any.whl", hash = "sha256:44049086198860b91c9f61668448892aea33a00ca569004662637a2459bad500"},
-    {file = "veho-0.0.4.tar.gz", hash = "sha256:f135254264a3180152591f54ab65e0f575fc7a5e04471bd064deb0cdfdb5d389"},
+    {file = "veho-0.0.9-py3-none-any.whl", hash = "sha256:1249c3ca0143598210934acfd8dd96469e04ecee5d5cf04102c3b33530a1c758"},
+    {file = "veho-0.0.9.tar.gz", hash = "sha256:c77405c0029344297b9c0acdb444391f76669a94ece2febbac7159bef7d223a7"},
 ]
