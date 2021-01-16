@@ -1,5 +1,5 @@
 # from resources import SP
-from texting.str_value import str_value
+from texting import str_value
 
 SP = ' '
 stringValueCandidates = [
